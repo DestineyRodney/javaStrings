@@ -54,19 +54,19 @@ public class HelloWorld {
 //        System.out.println(scanner.nextInt());
 //        scanner.close();
 
-        int caseSwitch = 1;
-
-        switch (caseSwitch) {
-            case 1:
-                System.out.println("Case 1");
-                // Fall through!
-            case 2:
-                System.out.println("Case 2");
-                break;
-            default:
-                System.out.println("Default case");
-                break;
-        }
+//        int caseSwitch = 1;
+//
+//        switch (caseSwitch) {
+//            case 1:
+//                System.out.println("Case 1");
+//                // Fall through!
+//            case 2:
+//                System.out.println("Case 2");
+//                break;
+//            default:
+//                System.out.println("Default case");
+//                break;
+//        }
 
 //        int i = 5;
 //        while (i < 15){
@@ -87,14 +87,25 @@ public class HelloWorld {
 //        }while (i > -10);
 
 //        Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
-        long i = 2;
+//        long i = 2;
+//
+//        do {
+//            System.out.println(i);
+//
+//            i= i * i;
+//        }while (i< 1000000);
 
-        do {
-            System.out.println(i);
-
-            i= i * i;
-        }while (i< 1000000);
-
+        for (int i = 1; i < 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(i + "FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println(i + "Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println(i + "Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
 
 
 
