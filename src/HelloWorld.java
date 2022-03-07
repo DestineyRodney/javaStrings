@@ -95,18 +95,36 @@ public class HelloWorld {
 //            i= i * i;
 //        }while (i< 1000000);
 
-        for (int i = 1; i < 100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println(i + "FizzBuzz");
-            } else if (i % 3 == 0) {
-                System.out.println(i + "Fizz");
-            } else if (i % 5 == 0) {
-                System.out.println(i + "Buzz");
-            } else {
-                System.out.println(i);
-            }
-        }
+//        for (int i = 1; i < 100; i++) {
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.println(i + "FizzBuzz");
+//            } else if (i % 3 == 0) {
+//                System.out.println(i + "Fizz");
+//            } else if (i % 5 == 0) {
+//                System.out.println(i + "Buzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
+        String cont;
+      do{
+          System.out.println("What number would you like to go up to?");
+          int userInput = scanner.nextInt();
 
+          System.out.println("Here is your table!\n");
+          System.out.println("number | squared | cubed\n");
+          System.out.println("------ | ------- | -----\n");
+
+          for (int i = 1; i <= userInput; i++){
+              int number = i;
+              int squared = i * i;
+              int cubed = i * i * i;
+              System.out.printf("%s      |%s      |%s", number, squared, cubed);
+              System.out.println("");
+          }
+          System.out.println("Would you like to continue? (y/n)");
+          cont = scanner.next();
+      }while (cont.equals("y"));
 
 
 
