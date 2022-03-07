@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class HelloWorld {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        System.out.println("Hello, World!");
 //        int myFavNum = 5;
 //        String myString = "Hello honey";
@@ -107,26 +107,43 @@ public class HelloWorld {
 //            }
 //        }
         String cont;
-      do{
-          System.out.println("What number would you like to go up to?");
-          int userInput = scanner.nextInt();
+        do {
+            System.out.println("What number would you like to go up to?");
+            int userInput = scanner.nextInt();
 
-          System.out.println("Here is your table!\n");
-          System.out.println("number | squared | cubed\n");
-          System.out.println("------ | ------- | -----\n");
+            System.out.println("Here is your table!\n");
+            System.out.println("number | squared | cubed\n");
+            System.out.println("------ | ------- | -----\n");
 
-          for (int i = 1; i <= userInput; i++){
-              int number = i;
-              int squared = i * i;
-              int cubed = i * i * i;
-              System.out.printf("%s      |%s      |%s", number, squared, cubed);
-              System.out.println("");
-          }
-          System.out.println("Would you like to continue? (y/n)");
-          cont = scanner.next();
-      }while (cont.equals("y"));
+            for (int i = 1; i <= userInput; i++) {
+                int number = i;
+                int squared = i * i;
+                int cubed = i * i * i;
+                System.out.printf("%s      |%s      |%s", number, squared, cubed);
+                System.out.println("");
+            }
+            System.out.println("Would you like to continue? (y/n)");
+            cont = scanner.next();
+        } while (cont.equals("y"));
 
-
+        String toContinue;
+        do {
+            System.out.println("Enter a grade value 0 - 100");
+            int userGrade = scanner.nextInt();
+            if (userGrade >= 88) {
+                System.out.println("A");
+            } else if (userGrade >= 88) {
+                System.out.println("B");
+            } else if (userGrade >= 67) {
+                System.out.println("C");
+            } else if (userGrade >= 60) {
+                System.out.println("D");
+            } else {
+                System.out.println("F");
+            }
+            System.out.println("Would you like to continue? (y/n)");
+            toContinue = scanner.next();
+        }while(toContinue.equalsIgnoreCase("y"));
 
     }
-}
+    }
