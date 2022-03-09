@@ -27,6 +27,30 @@ public class MethodsExercises {
         return getInteger(1,100);
     }
 
+    public static void factorial(){
+        Scanner scanner = new Scanner(System.in);
+        String toContinue;
+        do {
+            System.out.println("Enter a number 1-10");
+            int userInput = scanner.nextInt();
+            if(userInput <= 10 & userInput >= 1){
+                String calc = "! =";
+                long factorial = 1;
+                for(int i = 1; i <= userInput; i++){
+                    factorial *= i;
+                    calc = calc + "" + i + " x";
+                }
+                calc = calc.substring(0, calc.length() - 1);
+                System.out.println(userInput + calc + " = " + factorial);
+            }else {
+                System.out.println("The number you entered is not between 1 and 10");
+            }
+            System.out.println("Would you like to coninue? (y/n)");
+            toContinue = scanner.next();
+
+        }while (toContinue.equalsIgnoreCase("y"));
+    }
+
 
     public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -43,7 +67,7 @@ public class MethodsExercises {
             answer = scanner.next();
         }while (answer.equalsIgnoreCase("y"));
 
-
+factorial();
 
     }
 }
