@@ -12,6 +12,12 @@ public static String getValue(String[] arr){
 
     public static void main(String[] args) {
 
+    for(String adjective : adjectives){
+        System.out.println(adjective);
+    }
+    for (String noun : nouns){
+        System.out.println(noun);
+    }
         String adj = getValue(adjectives);
         String noun = getValue(nouns);
         System.out.println("Here is your server name:");
