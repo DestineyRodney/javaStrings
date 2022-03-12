@@ -9,7 +9,7 @@ public class Movie {
         this.category = category;
     }
 
-   public String getName (){
+    public String getName(){
         return name;
     }
 
@@ -23,5 +23,12 @@ public class Movie {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public static void displayMovies(Movie[] movies) {
+        for (Movie movie : movies) {
+            System.out.printf("%s %s\n", movie.getName(), movie.getCategory());
+        }
+
     }
 }
