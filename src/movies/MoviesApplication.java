@@ -25,6 +25,8 @@ public class MoviesApplication {
                 System.out.println("Thank you see you next time");
             }else if (userInput == 1){
                 Movie.displayMovies(movies);
+            }else if (userInput == 2){
+                Movie.displayByGenre(movies, "animated");
             }
             System.out.println("Would you like to enter another selection? (y/n)");
             toCont = scanner.next();

@@ -24,11 +24,17 @@ public class Movie {
     public void setCategory(String category) {
         this.category = category;
     }
-
-    public static void displayMovies(Movie[] movies) {
-        for (Movie movie : movies) {
-            System.out.printf("%s %s\n", movie.getName(), movie.getCategory());
+    public static void displayMovies(Movie[] movies){
+        for (Movie movie : movies){
+            System.out.println("Name: " + movie.getName() + " Category: " + movie.getCategory());
         }
+    }
 
+    public static void displayByGenre(Movie[] movies, String category){
+        for (Movie movie : movies) {
+            if (movie.getCategory().equalsIgnoreCase(category)) {
+                System.out.println(movie.getName() + movie.getCategory());
+            }
+        }
     }
 }
