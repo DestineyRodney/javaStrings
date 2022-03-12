@@ -3,10 +3,12 @@ public class ServerNameGenerator {
 
     static String[] nouns = {"man", "woman", "teacher", "doctor", "beans", "dog", "monkey", "music", "home", "school"};
 
-  public static String getValue(String[] arr){
-      int random = (int) (Math.random() * arr.length -1);
-      return arr[random];
-  }
+
+public static String getValue(String[] arr){
+    int random = (int) (Math.random() * arr.length -1);
+    System.out.println(random);
+    return arr[random];
+}
 
     public static void main(String[] args) {
 
