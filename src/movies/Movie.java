@@ -32,8 +32,8 @@ public class Movie {
 
     public static void displayByGenre(Movie[] movies, String category){
         for (Movie movie : movies) {
-            if (movie.getCategory().equalsIgnoreCase(category)) {
-                System.out.println(movie.getName() + movie.getCategory());
+            if(movie.getCategory().equalsIgnoreCase(category)){
+                System.out.printf("Movie: %s Category: %s \n", movie.getName(), movie.getCategory()  );
             }
         }
     }

@@ -27,6 +27,12 @@ public class MoviesApplication {
                 Movie.displayMovies(movies);
             }else if (userInput == 2){
                 Movie.displayByGenre(movies, "animated");
+            } else if(userInput == 3){
+                Movie.displayByGenre(movies, "drama");
+            }else if(userInput == 4){
+                Movie.displayByGenre(movies, "horror");
+            }else if(userInput == 5){
+                Movie.displayByGenre(movies, "scifi");
             }
             System.out.println("Would you like to enter another selection? (y/n)");
             toCont = scanner.next();
