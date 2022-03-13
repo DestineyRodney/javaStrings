@@ -5,4 +5,8 @@ public class Square extends Rectangle{
         super(side, side);
     }
 
+    public String work() {
+        return "Square";
+    }
+
 }
