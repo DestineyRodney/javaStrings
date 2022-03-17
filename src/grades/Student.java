@@ -19,6 +19,10 @@ public class Student {
         this.grades.add(grade);
     }
 
+    public ArrayList<Integer> getGrades() {
+        return grades;
+    }
+
     public double getGradeAverage(){
         int sum = 0;
       for(int i = 0; i < grades.size(); i++){
