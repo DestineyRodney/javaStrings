@@ -26,14 +26,17 @@ public class GradesApplication {
         System.out.println("Here are the Github usernames of our students");
         System.out.println("mustardAddict123 | PotatoPusher126");
         Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.next();
 
        String toContinue;
         do{
             System.out.println("What student would you like to see more information on?\n");
+            String userInput = scanner.next();
+            System.out.println(userInput);
+            System.out.println("Student Name: " + student.get(userInput).getStudentName() + "\n Github Name: " + userInput + "\n Grades: " + student.get(userInput).getGrades() + "\n Grade Average: " + student.get(userInput).getGradeAverage());
 
             System.out.println("Would you like to see another student?\n");
           toContinue = scanner.next();
+          scanner.nextLine();
         }while(toContinue.equalsIgnoreCase("y"));
     }
 }
