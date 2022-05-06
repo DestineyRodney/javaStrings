@@ -32,7 +32,15 @@ public class Input {
         return yesNo();
     }
 
-
+public int getInt(){
+        try{
+            String newString = getString();
+            return Integer.valueOf(newString);
+        }catch (Exception e){
+            System.out.println("Please enter an integer");
+            return getInt();
+        }
+}
     int getInt( int min, int max){
         System.out.println("Enter a number between 1 and 10");
         int userInput = this.scanner.nextInt();
@@ -43,11 +51,11 @@ public class Input {
         return getInt(min, max);
     }
 
-    int getInt (){
-        System.out.println("Enter a number");
-        return this.scanner.nextInt();
-
-        }
+//    int getInt (){
+//        System.out.println("Enter a number");
+//        return this.scanner.nextInt();
+//
+//        }
 
    public double getDouble (double min, double max){
         double userDouble;
@@ -59,8 +67,18 @@ public class Input {
       return getDouble(min, max);
     }
 
-   public double getDouble (){
-        return this.scanner.nextDouble();
-   }
+//   public double getDouble (){
+//        return this.scanner.nextDouble();
+//   }
+
+    public double getDouble(){
+        try{
+            String newString = getString();
+            return Double.valueOf(newString);
+        }catch (Exception e){
+            System.out.println("Please enter a double");
+            return getDouble();
+        }
+    }
 
 }

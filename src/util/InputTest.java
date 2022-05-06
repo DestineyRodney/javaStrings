@@ -23,10 +23,13 @@ public class InputTest {
 //        System.out.println("Enter a decimal number between 1 and 10");
 //        double userDouble = input.getDouble(1, 10);
 //        System.out.println(userDouble);
+        int userInputB = input.getInt();
+
+        double userInputC = input.getDouble();
 
 //        input.getString("Enter a string");
 
-        input.yesNo("Are you okay?");
+//        input.yesNo("Are you okay?");
     }
 
 }
