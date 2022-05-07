@@ -15,11 +15,6 @@ public class recursion {
         return result;
     }
 
-    public static void main(String[] args) {
-        count(5);
-
-    getPower(3, 5);
-    }
 
 
 

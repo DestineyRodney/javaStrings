@@ -14,8 +14,8 @@ public class Person {
         System.out.println(this.name);
     }
 
-    public void sayHello(){
-        System.out.printf("Hello %s ", this.name);
+    public String sayHello(){
+       return String.format("Hello %s ", this.name);
     }
 
     public static void main (String[] args){
